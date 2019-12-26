@@ -300,5 +300,5 @@ The python methods corresponding to each API contents will be listed below:
 
 For more details, please look at the [Thinkific API Docs](https://api.thinkific.com/documentation).
 
-TODO:
+### TODO:
 - Add the remaining API endpoints

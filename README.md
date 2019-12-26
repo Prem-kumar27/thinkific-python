@@ -1,7 +1,16 @@
 # Thinkific Python SDK
+[![PyPI version](https://badge.fury.io/py/thinkific.svg)](https://badge.fury.io/py/thinkific)
+
 This is a Python SDK to interact with the
 [Thinkific LMS](http://www.thinkific.com/) API. The official documentation for the API can be found
 [here](https://api.thinkific.com/documentation).
+
+## Installation
+
+``` bash
+pip install thinkific
+```
+
 ## Usage
 ### Initialize
 

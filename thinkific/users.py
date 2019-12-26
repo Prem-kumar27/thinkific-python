@@ -4,7 +4,6 @@ from .client import Client
 class Users:
     def __init__(self, client):
         self.__client = client
-        print(self.__client)
 
     def list(self, page: int = None, limit: int = None, email: str = None,
              role: str = None, external_source: str = None, custom_profile_field_label: str = None,

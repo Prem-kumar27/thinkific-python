@@ -2,6 +2,7 @@ from .client import Client
 from .users import Users
 from .promotions import Promotions
 from .enrollments import Enrollments
+from .chapters import Chapters
 from .courses import Courses
 from .coupons import Coupons
 from .contents import Contents
@@ -16,6 +17,7 @@ class Thinkific:
         self.__users = Users(client)
         self.__promotions = Promotions(client)
         self.__enrollments = Enrollments(client)
+        self.__chapters = Chapters(client)
         self.__courses = Courses(client)
         self.__coupons = Coupons(client)
         self.__contents = Contents(client)
@@ -34,6 +36,10 @@ class Thinkific:
     @property
     def enrollments(self):
         return self.__enrollments
+
+    @property
+    def chapters(self):
+        return self.__chapters
 
     @property
     def courses(self):

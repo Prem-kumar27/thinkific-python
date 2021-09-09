@@ -12,7 +12,7 @@ class Client(object):
         }
 
         self.__headers_webhooks = {
-            'Authorization: Bearer ': '%s' % api_key,
+            'Authorization: ': 'Bearer %s' % api_key,
             'Content-Type': 'application/json'
         }
 

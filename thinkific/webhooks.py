@@ -15,11 +15,11 @@ class Webhooks:
     def create_webhook(self, values: dict):
         return self.__client.request('post', '/webhooks', data=values, api='Webhooks')
 
-    def retrieve_webhook(self, id: string):
+    def retrieve_webhook(self, id: str):
         return self.__client.request('get', '/webhooks/%s' % id, api='Webhooks')
 
-    def update_webhook(self, id: string, values: dict):
+    def update_webhook(self, id: str, values: dict):
         return self.__client.request('put', '/webhooks/%s' % id, data=values, api='Webhooks')
 
-    def delete_webhook(self, id: string):
+    def delete_webhook(self, id: str):
         return self.__client.request('delete', '/webhooks/%s' % id, api='Webhooks')

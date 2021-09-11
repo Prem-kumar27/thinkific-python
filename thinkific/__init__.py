@@ -9,7 +9,7 @@ from .contents import Contents
 from .products import Products
 from .bundles import Bundles
 from .course_reviews import CourseReviews
-
+from .webhooks import Webhooks
 
 class Thinkific:
     def __init__(self, api_key, subdomain):
@@ -24,6 +24,7 @@ class Thinkific:
         self.__products = Products(client)
         self.__bundles = Bundles(client)
         self.__course_reviews = CourseReviews(client)
+        self.__webhooks = Webhooks(client)
 
     @property
     def users(self):
@@ -64,3 +65,7 @@ class Thinkific:
     @property
     def course_reviews(self):
         return self.__course_reviews
+
+    @property
+    def webhooks(self):
+        return self.__webhooks

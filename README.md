@@ -36,6 +36,7 @@ The following endpoints are currently supported:
 - Products
 - Promotions
 - Users
+- Webhooks
 
 Each endpoint can be initialized in the following way:
 ``` python
@@ -47,6 +48,7 @@ The methods can be accessed as below
 ``` python
   thinkific = Thinkific("<auth_token>","<subdomain>")
   thinkific.courses.list()
+  thinkific.webhooks.list()
   ```
 The python methods corresponding to each API contents will be listed below:
 #### Bundles
@@ -295,6 +297,34 @@ The python methods corresponding to each API contents will be listed below:
   <tr>
     <td class="tg-yw4l">Delete a User</td>
     <td class="tg-yw4l">delete_user()</td>
+  </tr>
+</table>
+
+#### Webhooks
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Content</b></th>
+    <th class="tg-yw4l"><b>Function</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Retrieve a list of Webhooks</td>
+    <td class="tg-yw4l">list()</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Retrieve a Webhook</td>
+    <td class="tg-yw4l">retrieve_webhook()</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Create a User</td>
+    <td class="tg-yw4l">create_webhook()</td>
+  </tr>
+   <tr>
+    <td class="tg-yw4l">Update a Webhook</td>
+    <td class="tg-yw4l">update_webhook()</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Delete a Webhook</td>
+    <td class="tg-yw4l">delete_webhook()</td>
   </tr>
 </table>
 

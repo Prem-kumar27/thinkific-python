@@ -11,11 +11,24 @@ class Client(object):
             'Content-Type': 'application/json',
         }
 
-    def request(self, method=None, url=None, data=None, params=None):
+        self.__headers_webhooks = {
+            'Authorization': 'Bearer %s' % api_key,
+            'Content-Type': 'application/json'
+        }
+
+    def request(self, method=None, url=None, data=None, params=None, api='Admin'):
         if data:
             data = json.dumps(data)
-        result = requests.request(method=method, url=mergeURL(
-            BASE_URL+url, params), data=data, headers=self.__headers)
+
+        if api == 'Admin':
+            full_url = mergeURL(BASE_URL + ADMIN_API_URL + url, params)
+            result = requests.request(method=method, url=full_url, data=data, headers=self.__headers)
+        elif api == 'Webhooks':
+            full_url = mergeURL(BASE_URL + WEBHOOKS_API_URL + url, params)
+            result = requests.request(method=method, url=full_url, data=data, headers=self.__headers_webhooks)
+        else:
+            return 'API provided is not available'
+
         return self.__validator(result)
 
     def __validator(self, result):

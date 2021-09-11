@@ -1,6 +1,7 @@
 from urllib.parse import urlencode
-BASE_URL = "https://api.thinkific.com/api/public/v1"
-
+BASE_URL = "https://api.thinkific.com/api"
+ADMIN_API_URL = "/public/v1"
+WEBHOOKS_API_URL = "/v2"
 
 def cleanParams(params: dict):
     return {k: v for k, v in params.items() if v}

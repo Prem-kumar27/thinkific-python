@@ -5,14 +5,14 @@ with open('README.md') as fp:
 
 setup(
     name='thinkific',
-    version='0.1.0',
+    version='0.1.1',
     description='Python Client wrapper for Thinkific API',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Premkumar',
     author_email='sprem1997@gmail.com',
     url='https://github.com/Prem-kumar27/thinkific-python',
-    download_url='https://github.com/Prem-kumar27/thinkific-python/archive/v0.1.0.tar.gz',
+    download_url='https://github.com/Prem-kumar27/thinkific-python/archive/refs/tags/v0.1.1.tar.gz',
     keywords=['thinkific','thinkific-api','thinkific-lms'],
     packages=find_packages(),
     install_requires=['requests'],
